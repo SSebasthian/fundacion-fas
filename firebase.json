@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "disk/fundacion-fas/browser",
+    "public": "dist/fundacion-fas/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
