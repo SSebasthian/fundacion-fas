@@ -26,3 +26,9 @@ dist/fundacion-fas/browser  (Ruta para Dejar el DEPLOY del Proyecto)<br>
 `firebase deploy`<br>
 
 https://fundacion-fas.web.app
+
+
+## Creación de Proyecto Angular
+
+`ng new fundacion-fas` (Se crea con CSS)<br>
+`ng generate component compartido/menu` (Menu)<br>
