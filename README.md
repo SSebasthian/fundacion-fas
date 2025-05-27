@@ -4,3 +4,14 @@
 `npm install -g @angular/cli@17`<br>
 `ng add @angular/material@17`<br>
 
+
+## Necesario Firebase
+<b>Se Crea Proyecto en Firebase con Authentication y Firestore Database</b><br>
+`npm install firebase`<br>
+`ng add @angular/fire`<br>
+`npm install -g firebase-tools`<br>
+
+(seleccionamos Authentication / firestore / Realtime Database )<br>
+(Seguimos los pasos para autenticarnos con la cuenta de Firebase)<br>
+(Seleccionamos el correo con el que se registró Firebase)<br>
+(Seleccionamos el proyecto creado con Firebase (sistemas-inventario))<br>
