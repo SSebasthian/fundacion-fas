@@ -15,3 +15,14 @@
 (Seguimos los pasos para autenticarnos con la cuenta de Firebase)<br>
 (Seleccionamos el correo con el que se registró Firebase)<br>
 (Seleccionamos el proyecto creado con Firebase (sistemas-inventario))<br>
+
+
+## Firebase DEPLOY
+`firebase init` (Hosting - Configure con GitHub)<br>
+dist/fundacion-fas/browser  (Ruta para Dejar el DEPLOY del Proyecto)<br>
+
+
+`ng build` <br>
+`firebase deploy`<br>
+
+https://fundacion-fas.web.app
