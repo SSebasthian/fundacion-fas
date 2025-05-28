@@ -1,0 +1,274 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    height: 70px;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1000;
+}
+.menu .logo{
+    width: 30%;
+}
+
+.menu .logo img{
+    height: 70px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu .opciones {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.menu .opciones li a {
+  position: relative;
+  text-decoration: none;
+  color: #4fbfef;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #d6d6d6;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.menu .opciones li a::after {
+  content: attr(data-etiqueta); /* Usa un atributo personalizado */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -28px;
+  background-color: #4fbfef;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.menu .opciones li a:hover::after,
+.menu .opciones li a.activa::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
+  pointer-events: auto;
+}
+
+.solo-responsive {
+  display: none;
+}
+
+#menu-responsive,
+#menu-icon-hamburguesa,
+.barra-responsive{ 
+	cursor: pointer;
+	display: none;
+} 
+
+
+@media (max-width: 700px) {
+   
+  /* DISEÑO MENU */
+  .barra-responsive{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+  .barra-responsive img{
+    width: 60px;
+  }
+
+  .contenedor-menu{
+		transform: translateX(-100%);
+		transition: transform 0.4s ease;     
+  }
+
+  .contenedor-menu.menu-abierto {
+  		transform: translateX(0);
+	}
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100vh;
+    background:#fff ;
+    z-index: 999;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu .logo img{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+  }
+
+  .menu .opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu .opciones li a {
+    font-size: 28px;
+    color: #188a73; 
+  }
+
+  .menu .opciones li a::before,
+  .menu .opciones li a::after,
+  .menu .opciones li a.activa::after,
+  .menu .opciones li a.activa::before {
+    content: '•';     
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #4fbfef;
+    font-size: 30px;
+  }
+  .menu .opciones li a::before,
+  .menu .opciones li a.activa::before
+   {
+    left: -22px;
+  }
+  
+  .menu .opciones li a::after,
+  .menu .opciones li a.activa::after {
+    content: '•';
+    right: -15px;
+    top: 26px;
+    text-align: right;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 30px;
+    color: #4fbfef;
+    white-space: normal;
+    transform: translateY(-50%);
+  }
+
+  .menu .opciones li a:hover::before,
+  .menu .opciones li a:hover::after,
+  .menu .opciones li a.activa::after,
+  .menu .opciones li a.activa::before {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  .solo-responsive {
+    display: block;
+  }
+
+   /* Subrayado personalizado */
+  .menu .opciones li a span,
+  .menu .opciones li a.activa span{
+    position: relative;
+  }
+
+  .menu .opciones li a span::after
+   {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background-color: #4fbfef;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .menu .opciones li a:hover span::after,
+  .menu .opciones li a.activa span::after {
+    transform: scaleX(1);
+  }
+
+  /* MENU HAMBURGUESA */
+  #menu-icon-hamburguesa {
+		position: fixed;
+		top: 25px;
+		right: 20px;
+		display: block;
+		width: 30px; 
+		height: 30px;
+		cursor: pointer;
+		z-index: 2001; 
+	}
+  
+  #menu-icon-hamburguesa div {
+		position: relative;
+		top: 0;
+		height: 4px; 
+		background-color: #188a73;
+		margin-bottom: 5px;
+		transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+		0.3s ease right;
+		border-radius: 2px;
+	}
+  #menu-icon-hamburguesa div:first-child {
+		transform-origin: left;
+	}
+
+	#menu-icon-hamburguesa div:last-child {
+		margin-bottom: 0;
+		transform-origin: right;
+	}
+
+	#menu-icon-hamburguesa div:nth-child(2) {
+		right: 0;
+		width: 30px;
+	}
+
+	#menu-responsive:checked + #menu-icon-hamburguesa div:first-child {
+		top: -4px;
+		transform: rotateZ(45deg);
+	}
+
+	#menu-responsive:checked + #menu-icon-hamburguesa div:last-child {
+		top: 8px;
+		transform: rotateZ(45deg);
+	}
+
+	#menu-responsive:checked + #menu-icon-hamburguesa div:nth-child(2) {
+		width: 42px;
+		top: 0;
+		right: 6px;
+		transform: rotateZ(-45deg);
+	}
+
+  
+}
