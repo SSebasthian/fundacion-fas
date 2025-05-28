@@ -1,7 +1,7 @@
 
 <div class="barra-responsive">
   <div class="logo-responsive">
-        <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo.png?alt=media&token=6c12e567-036f-4ee1-b877-49eb2dfe6e05" alt="FAS">
+        <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo.png?alt=media&token=6c12e567-036f-4ee1-b877-49eb2dfe6e05" alt="FAS" [routerLink]="['inicio']">
     </div>
   <input type="checkbox" id="menu-responsive" (click)="menuHamburguesa()" #menuCheckbox>
     <label for="menu-responsive" id="menu-icon-hamburguesa">
@@ -13,13 +13,13 @@
 
 <div class="contenedor-menu" [class.menu-abierto]="menuAbierto">
   
-  <nav class="menu" [routerLink]="['inicio']">
+  <nav class="menu">
     <div class="logo" (click)="cerrarMenu()">
-        <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo.png?alt=media&token=6c12e567-036f-4ee1-b877-49eb2dfe6e05" alt="FAS">
+        <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo.png?alt=media&token=6c12e567-036f-4ee1-b877-49eb2dfe6e05" alt="FAS" [routerLink]="['inicio']">
     </div>
 
     <ul class="opciones">
-      <li><a [routerLink]="['']" routerLinkActive="activa"  (click)="cerrarMenu()"><span>INICIO</span></a></li>
+      <li><a [routerLink]="['inicio']" routerLinkActive="activa"  (click)="cerrarMenu()"><span>INICIO</span></a></li>
       <li><a [routerLink]="['']" routerLinkActive=""  (click)="cerrarMenu()"><span>OPCION</span></a></li>
       <li><a [routerLink]="['']" routerLinkActive=""  (click)="cerrarMenu()"><span>OPCION</span></a></li>
       <li><a [routerLink]="['']" routerLinkActive=""  (click)="cerrarMenu()"><span>OPCION</span></a></li>
