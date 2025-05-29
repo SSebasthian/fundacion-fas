@@ -1,0 +1,231 @@
+.contenedor-imagen {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  height: auto; /* altura automática */
+  aspect-ratio: 16 / 9; /* Mantiene relación proporcional en todas las pantallas */
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  display: block;
+  object-fit: contain; /* opcional, mantiene la imagen completa dentro del contenedor */
+}
+
+.texto-superpuesto {
+  position: absolute;
+  width: 90%;
+  max-width: 600px;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out; 
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+}
+
+/* ARTICULOS PAGINA */
+
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+  width: 93%;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;  
+  z-index: -1;
+  position: relative;
+  margin-top: -110px;
+}
+
+.valores .valor {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  position: relative; 
+}
+
+.valores .valor::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -30px;
+  width: 2px;
+  background-color: #4fbfef;
+  z-index: 1;
+}
+.valores .valor:nth-child(3n)::after {
+    display: none;
+  }
+.valores .valor:hover {
+  transform: translateY(-5px);
+}
+
+.valores .icono-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+
+.valores .valor h2 {
+  color: #222;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.valores .valor p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.valores mat-icon {
+  font-size: 45px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #4fbfef;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .valores .valor::after {
+        right: -5px;
+    }
+}
+
+
+/* Tablets: 2 columnas */
+@media (max-width: 1052px) {
+    
+    .valores {
+        grid-template-columns: repeat(2, 1fr);
+        width: 87%;
+        overflow: hidden;
+    }
+    .valores .valor::after {
+        right: -60px;
+    }
+
+    .valores .valor:nth-child(2n)::after {
+        display: none;
+    }
+
+    .valores .valor:nth-child(3n)::after {
+        display: block;
+    }
+}
+
+
+@media (max-width: 980px){
+    .valores .valor::after {
+        right: -40px;
+    }
+}
+
+@media (max-width: 930px){
+    .valores .valor::after {
+        right: -25px;
+    }
+}
+
+@media (max-width: 850px){
+    .valores .valor::after {
+        right: 0px;
+    }
+
+    .valores {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor-imagen {
+        padding-top: 70px;
+        z-index: -1;
+    }
+    .texto-superpuesto {
+        font-size: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        bottom: 15%;
+        line-height: 2rem;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin-top: 0px;
+    }
+
+  .valores .valor h2 {
+    text-align: center;
+  }
+
+  .valores .valor::before {
+        content: "";
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        width: 100%; /* Largo de la línea horizontal */
+        height: 3px;  /* Grosor de la línea */
+        background-color: #4fbfef;
+        z-index: 1;
+    }
+
+    .valores .valor:nth-child(4n)::after,
+    .valores .valor:nth-child(1n)::after{
+        display: none;
+    }
+
+    .valores .valor::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        bottom: 0px;
+        width: 2px;
+        background-color: #4fbfef;
+        z-index: 1;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .texto-superpuesto {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    bottom: 10%;
+  }
+}
+
