@@ -1,0 +1,513 @@
+/* DISEÑO GLOBAL */
+
+.quienes-somos {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.quienes-somos .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quienes-somos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+.quienes-somos h2::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+.quienes-somos .section {
+  margin-bottom: 40px;
+}
+
+.quienes-somos .section h3 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  font-weight: 550;
+}
+
+.quienes-somos .section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+/* SECCION MISION Y VISION */
+
+.mision-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+.mision-vision .mision .content-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 20%;
+    align-items: start;
+    gap: 40px;
+}
+.mision-vision .vision .content-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    align-items: start;
+    gap: 40px;
+}
+
+.mision-vision .content-grid h3{
+    font-weight: 550;
+}
+
+.mision-vision .vision .content-grid h3{
+    text-align: right;
+}
+
+.mision-vision .content-grid .text p{
+  width: 100%;
+  justify-content: center;
+}
+
+.mision-vision .content-grid .img-container img {
+  width: 300px;
+  object-fit: contain;
+}
+
+.mision-vision .content-grid .icon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mision-vision .content-grid .icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2c3e50;
+  text-align: center;
+  width: 90%;
+}
+
+
+.mision-vision .content-grid .icon-item span {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+
+.mision-vision .content-grid .icon-item mat-icon {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #2980b9;
+  transition: transform 0.3s ease;
+}
+
+.icon-item mat-icon:hover {
+  transform: scale(1.2);
+} 
+
+
+
+/* PROPOSITO Y VALORES */
+
+
+.prop-valores-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    margin: auto;
+}
+.prop-valores-container .section {
+    padding: 20px;
+}
+
+
+
+.prop-valores-container .valores {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.prop-valores-container .valores li {
+     position: relative;
+    background-color: #188a73;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    transition: 0.4s ease-in-out;
+    overflow: visible; /* ¡Importante! */
+    cursor: pointer;
+    flex-direction: column;
+} 
+
+
+.prop-valores-container .valores li::before{
+     content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #f9f9f9;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 50% 100%;
+    border-bottom-left-radius: 50% 100%;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.prop-valores-container .valores li::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f9f9f9;
+    transition:  .5s ease-in-out;
+    z-index: -3;
+    opacity: .8;
+}
+
+.prop-valores-container .valores li mat-icon{
+      transform: rotate(-45deg);
+      width: 40px;
+      height: 40px;
+      font-size: 40px;
+      color: #2980b9;
+
+}
+
+.prop-valores-container .valores li:hover::before{
+    width: 130px;
+    border-radius: 100%;
+    transform: rotate(85deg);
+}
+
+.prop-valores-container .valores-descripcion h2{
+    margin-top: 30px;
+    font-size: 24px;
+}
+.prop-valores-container .valores-descripcion p{
+    margin-top: -30px;
+}
+
+.prop-valores-container .opcion-valores h3{
+    text-align: center;
+    margin-top: 17px;
+    font-size: 27px;
+}
+
+.prop-valores-container .activo::before{
+    display: none;
+}
+
+
+/* OBJETIVO */
+
+.section.objetivo {
+  text-align: justify;
+}
+
+.section.objetivo img {
+  float: right;
+  right: 70px;
+  width: 180px;
+  height: auto;
+  shape-outside: url("https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/objetivo.png?alt=media&token=76b42488-3b01-437e-b549-11c531d25be1");
+  shape-image-threshold: 0.5;
+  shape-margin: 20px;
+  transform: scaleX(-1); /* reflejar imagen */
+  margin: 0 1.5rem 1rem 0;
+}
+
+
+
+/* UBICACION */
+
+
+.seccion-ubicacion {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.seccion-ubicacion .titulo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.seccion-ubicacion .titulo::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+.seccion-ubicacion .contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* El mapa */
+.seccion-ubicacion .contenedor iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none; /* evita movimiento del mapa */
+}
+
+.seccion-ubicacion .mapa-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 930px) {
+
+    /* MISION Y VISION */
+    
+    .mision-vision .mision .content-grid {
+        width: 95%;
+        grid-template-columns: 60% 10%;
+    }
+    .mision-vision .vision .content-grid {
+        width: 95%;
+        grid-template-columns: 30% 60%;
+    }
+    .mision-vision .content-grid .img-container img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .section.objetivo {
+        width: 90%;
+        margin: auto;
+    }
+    .section.objetivo img {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 840px) {
+   .prop-valores-container .valores {
+        width: 75%;
+        margin-left: 30px;  
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* MISION Y VISION */
+
+    .mision-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    .quienes-somos {
+        padding-top: 100px;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    /* MISION Y VISION */
+
+    .mision-vision {
+        overflow: hidden;
+    }
+    .mision-vision .mision .content-grid {
+        width: 95%;
+        grid-template-columns: 60% 10%;
+    }
+    .mision-vision .vision .content-grid {
+        width: 95%;
+        grid-template-columns: 30% 60%;
+    }
+    .mision-vision .content-grid .img-container img {
+        width: 200px;
+        margin-top: 70px;
+    }
+    .mision-vision .content-grid .icon-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    /* PROPOSITO Y VALORES */
+
+    .prop-valores-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .prop-valores-container .valores {
+        width: 90%;
+        margin-left: 0px;  
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    /* MISION Y VISION */
+
+    .quienes-somos .container .historia {
+        border-bottom: 3px solid #4fbfef;
+        padding-bottom: 30px;
+    }
+
+    .mision-vision {
+        grid-template-columns: 1fr;
+        margin-top: -80px;
+    }
+
+    .mision-vision .mision .content-grid,
+    .mision-vision .vision .content-grid {
+        grid-template-columns: 1fr; 
+        padding-bottom: 30px;
+        text-align: center;
+        border-bottom: 3px solid #4fbfef;
+    }
+
+    .mision-vision .content-grid .img-container {
+        order: -1; 
+        display: flex;
+        position: relative;
+    }
+    .mision-vision  .mision .content-grid .img-container img{
+        width: 100px;
+        margin-left: 30px;
+    }
+
+    .mision-vision  .vision .content-grid .img-container img{
+        width: 100px;
+        position: absolute;
+        right: 10px;
+        top: -90px;
+    }
+
+    .mision-vision .mision .content-grid h3{
+        margin-top: -150px;
+        text-align: right;
+        right: 70px;
+    }
+    .mision-vision .vision .content-grid h3{
+        margin-top: -150px;
+        text-align: left;
+        margin-left: 30px;
+        padding-top: 100px;
+    }
+
+    .mision-vision .content-grid .text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .mision-vision .content-grid .text p {
+        width: 90%;
+        padding: 0 10px;
+        text-align: justify;
+    }
+    
+    .mision-vision .content-grid .icon-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        text-align: center;
+    }
+    .mision-vision .content-grid .icon-item {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .mision-vision .content-grid .icon-item mat-icon {
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mision-vision .content-grid .icon-item span {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    /* OBJETIVO */
+    .section.objetivo img {
+        width: 120px;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

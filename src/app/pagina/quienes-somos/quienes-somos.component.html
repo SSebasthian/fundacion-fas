@@ -1,1 +1,147 @@
-<p>quienes-somos works!</p>
+<section class="quienes-somos">
+  <div class="container">
+    <h2>Quiénes Somos</h2>
+
+    <div class="section historia">
+      <h3>Nuestra Historia</h3>
+      <p>
+        La Fundación FAS fue creada en 2020 por Francia Elena Pinilla Rivadeneira con la misión de impulsar el emprendimiento y brindar capacitaciones orientadas al desarrollo personal y profesional, con el firme propósito de generar un impacto positivo en la comunidad. Desde sus inicios, FAS se ha consolidado como una organización comprometida con el bienestar social, centrando sus esfuerzos en la creación de oportunidades para poblaciones en situación de vulnerabilidad.      </p>
+      <p>
+        En 2024, la Fundación dio un paso significativo al integrar practicantes de la Universidad Iberoamericana, fortaleciendo así su estructura organizacional y ampliando el alcance de sus iniciativas. Ese mismo año, nació el programa psicosocial “Tú Eres Esperanza”, una propuesta centrada en el acompañamiento de mujeres víctimas de violencia de género, ofreciéndoles un espacio seguro para su recuperación emocional, fortalecimiento personal y empoderamiento integral.      </p>
+    </div>
+
+    <div class="section mision-vision">
+        <!-- Misión -->
+        <div class="mision">
+            <div class="content-grid">
+            <div class="text">
+                <h3>Misión</h3>
+                <p>
+                    Promover el desarrollo sostenible a través de proyectos integrales que mejoren la calidad de vida de las comunidades rurales y poblaciones vulnerables. Fomentamos prácticas que impulsen el desarrollo socioeconómico, protejan el medio ambiente y fortalezcan el tejido social.
+                </p>
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <span>Sostenibilidad</span>
+                        <mat-icon>autorenew</mat-icon>
+                    </div>
+                    <div class="icon-item">
+                        <mat-icon>eco</mat-icon>
+                        <span>Medioambiente</span>
+
+                    </div>
+                    <div class="icon-item">
+                        <span>Bienestar</span>
+                        <mat-icon>favorite</mat-icon>
+                    </div>
+                    <div class="icon-item">
+                        <mat-icon>diversity_3</mat-icon>
+                        <span>Comunidad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Mision.png?alt=media&token=1e078c37-d1c1-4837-be73-c6c0e7f94866" alt="misión">
+            </div>
+            </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="vision"> 
+            <div class="content-grid">
+                <div class="img-container">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Vision.png?alt=media&token=c55918a8-811e-40b7-8a23-5cf98d536198" alt="Ilustración visión">
+                </div>
+                <div class="text">
+                    <h3>Visión</h3>
+                    <p>
+                        Ser una organización reconocida a nivel nacional e internacional por su capacidad de generar soluciones sostenibles, equitativas e innovadoras que transformen positivamente a las comunidades vulnerables.
+                    </p>
+                    <div class="icon-list">
+                        <div class="icon-item">
+                            <span>Logros</span>
+                            <mat-icon>emoji_events</mat-icon>
+                        </div>
+                        <div class="icon-item">
+                            <mat-icon>sync</mat-icon>
+                            <span>Viabilidad</span>
+                        </div>
+                        <div class="icon-item">
+                            <span>Innovación</span>
+                            <mat-icon>lightbulb</mat-icon>
+                        </div>
+                        <div class="icon-item">
+                            <mat-icon>change_circle</mat-icon>
+                            <span>Transformación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="prop-valores-container">
+        <div class="section">
+            <h3>Propósito</h3>
+            <p>
+                Contribuimos al bienestar social y educativo, impulsando el desarrollo sostenible en las comunidades. Trabajamos en conjunto con nuestros practicantes para que cada acción tenga un impacto positivo, significativo y perdurable en el tiempo.      
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Valores</h3>
+            <ul class="valores">
+                <li [ngClass]="{'activo': valorSeleccionado === 'responsabilidad'}" (click)="seleccionarValor('responsabilidad')">
+                    <mat-icon>verified_user</mat-icon>
+                </li>
+                <li [ngClass]="{'activo': valorSeleccionado === 'respeto'}" (click)="seleccionarValor('respeto')">
+                    <mat-icon>diversity_3</mat-icon>
+                </li>
+                <li [ngClass]="{'activo': valorSeleccionado === 'honestidad'}" (click)="seleccionarValor('honestidad')">
+                    <mat-icon>gavel</mat-icon>
+                </li>
+                <li [ngClass]="{'activo': valorSeleccionado === 'calidad'}" (click)="seleccionarValor('calidad')">
+                    <mat-icon>military_tech</mat-icon>
+                </li>
+                <li [ngClass]="{'activo': valorSeleccionado === 'servicio'}" (click)="seleccionarValor('servicio')">
+                    <mat-icon>volunteer_activism</mat-icon>
+                </li>
+            </ul>
+            <div class="opcion-valores">
+                <h3 *ngIf="valorSeleccionado === 'responsabilidad'">RESPONSABILIDAD</h3>
+                <h3 *ngIf="valorSeleccionado === 'respeto'">RESPETO</h3>
+                <h3 *ngIf="valorSeleccionado === 'honestidad'">HONESTIDAD</h3>
+                <h3 *ngIf="valorSeleccionado === 'calidad'">CALIDAD</h3>
+                <h3 *ngIf="valorSeleccionado === 'servicio'">SERVICIO</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="section objetivo">
+        <h3>Nuestro Objetivo</h3>
+        <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/objetivo.png?alt=media&token=76b42488-3b01-437e-b549-11c531d25be1" alt="Empoderamiento femenino">
+        <p>
+            Nuestro propósito es empoderar a mujeres sobrevivientes de violencia de género a través de un acompañamiento psicosocial 
+            integral que fortalezca su bienestar emocional, autoestima y capacidades personales. Buscamos contribuir a su independencia 
+            económica, su recuperación plena y su reintegración activa a la sociedad. A través de programas de apoyo, formación y espacios 
+            seguros, trabajamos para que cada mujer recupere su voz, su dignidad y su proyecto de vida. Aspiramos a construir una cultura basada en 
+            el respeto, la equidad y la justicia de género, donde todas las mujeres puedan vivir libres de violencia y con iguales oportunidades para desarrollarse.
+        </p>
+    </div>
+
+    <div class="seccion-ubicacion">
+        <h2 class="titulo">Ubicación</h2>
+        <div class="contenedor">
+            <a class="mapa-link" href="https://www.google.com/maps?ll=7.978776,-75.417955&z=17&t=m&hl=es-419&gl=CO&mapclient=embed&q=Cl.+15+%2314-7+Montelibano,+Montel%C3%ADbano,+C%C3%B3rdoba" target="_blank" rel="noopener noreferrer" title="Ver en Google Maps"></a>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.1951035782267!2d-75.42052952411018!3d7.9787757920464495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5b13e99d83269b%3A0x67442b6b3ab8cec2!2sCl.%2015%20%2314-7%2C%20Montelibano%2C%20Montel%C3%ADbano%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sco!4v1748606605910!5m2!1ses-419!2sco" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+  </div>
+  
+</section>
+
