@@ -36,4 +36,6 @@ https://fundacion-fas.web.app
 `ng generate component pagina/quienes-somos` (Pagina Quiénes Somos)<br>
 `ng generate component pagina/autenticacion/acceso` (Acceso)<br>
 `ng generate service arquitectura/servicio/autenticador` (Servicio para Autenticacion - Acceso)
+`ng generate guard arquitectura/guardia/enrutamiento` (*)CanActivate (Guardian para Controlar Roles de Acceso)<br>
+
 
