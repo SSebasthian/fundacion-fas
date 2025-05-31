@@ -3,11 +3,14 @@ import { InicioComponent } from './pagina/inicio/inicio.component';
 import { QuienesSomosComponent } from './pagina/quienes-somos/quienes-somos.component';
 import { AccesoComponent } from './pagina/autenticacion/acceso/acceso.component';
 import { PerfilComponent } from './pagina/autenticacion/perfil/perfil.component';
+import { estadoPrivado, estadoPublico } from './arquitectura/guardia/enrutamiento.guard';
+
 
 
 export const routes: Routes = [
     {path: '',
-        component:InicioComponent
+        component:InicioComponent,
+        canActivate: [estadoPublico],
     },
     {path: 'inicio',
         component:InicioComponent
@@ -16,9 +19,11 @@ export const routes: Routes = [
         component:QuienesSomosComponent
     },
     {path: 'acceso',
-        component:AccesoComponent
+        component:AccesoComponent,
+        canActivate: [estadoPublico],
     },
     {path: 'perfil',
-        component:PerfilComponent
+        component:PerfilComponent,
+        canActivate: [estadoPrivado],
     },
 ];
