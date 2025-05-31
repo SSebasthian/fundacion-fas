@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AutenticadorService, Credencial } from '../../../arquitectura/servicio/autenticador.service';
+
+
 
 interface accesoForm{
   email: FormControl<string>;
@@ -28,6 +31,8 @@ interface accesoForm{
 export class AccesoComponent {
   mostrarOcultarClave = true;
   formBuilder = inject(FormBuilder);
+  private AutenticadorService = inject(AutenticadorService); //Funcion de envio del formulario
+  private router = inject(Router); //Redireccion a pagina despues de iniciar Sesion
 
   //******************* VALIDAR FORMULARIO *********************Add commentMore actions
   formularioAcceso: FormGroup<accesoForm> = this.formBuilder.group({
@@ -56,5 +61,25 @@ export class AccesoComponent {
   }
 
   // FUNCION DE ENVIO DEL FORMULARIO FIREBASE
-  envioAcceso(){}
+  async envioAcceso(): Promise<void>{
+    if ( this.formularioAcceso.invalid) return;
+  
+    const credencial: Credencial = {
+      email: this.formularioAcceso.value.email || '',
+      password: this.formularioAcceso.value.password || '',
+    };
+
+    try {
+      await this.AutenticadorService.accesoCorreoContrasena(credencial);
+        alert("Inicio de Sesion Exitoso");
+        this.router.navigateByUrl('/inicio')
+      } catch (error: any) {
+      // Firebase no distingue entre "correo no encontrado" y "contraseña incorrecta", por lo tanto, mostramos un mensaje genérico
+      if (error.code === 'auth/invalid-credential') {
+        alert('Correo o contraseña incorrectos.');
+      } else {
+        console.error('Error de sesión:', error.message);
+      }
+    }
+  }
 }
