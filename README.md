@@ -34,3 +34,4 @@ https://fundacion-fas.web.app
 `ng generate component compartido/menu` (Menu)<br>
 `ng generate component pagina/inicio` (Pagina Inicio)<br>
 `ng generate component pagina/quienes-somos` (Pagina Quiénes Somos)<br>
+`ng generate component pagina/autenticacion/acceso` (Acceso)<br>

@@ -64,6 +64,24 @@
   pointer-events: auto;
 }
 
+.menu .opciones li .icon-acceso mat-icon:hover,
+.menu .opciones li .icon-acceso mat-icon.activa{
+ color: #178a72;
+
+}
+
+.menu .opciones li .icon-acceso:hover::after,
+.menu .opciones li .icon-acceso::after{
+   opacity: 0;
+}
+.linea{
+  border-left: 1px solid #ccc;
+  padding-left: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .solo-responsive {
   display: none;
 }

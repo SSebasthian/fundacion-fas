@@ -1,12 +1,15 @@
 import { Component,  ViewChild, ElementRef } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [
     RouterLink,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
