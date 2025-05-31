@@ -17,5 +17,5 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './acceso.component.css'
 })
 export class AccesoComponent {
-
+  mostrarOcultarClave = true;
 }

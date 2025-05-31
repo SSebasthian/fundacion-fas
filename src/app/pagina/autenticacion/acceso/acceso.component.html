@@ -20,9 +20,18 @@
                 <mat-form-field class="grupo-formulario" appearance="outline">
                     <mat-icon class="icon-form"> vpn_key</mat-icon>
                     <mat-label>Contraseña</mat-label>
-                    <input matInput />
-                    <a mat-icon-button matSuffix>
-                        <mat-icon class="icon-mostrar-ocultar">visibility_off</mat-icon>
+                    <input Add commentMore actions
+                        matInput formControlName="password"
+                        [type]="mostrarOcultarClave ?  'password' : 'text'"
+                    />
+                    <a 
+                        mat-icon-button
+                        matSuffix
+                        (click)="mostrarOcultarClave = !mostrarOcultarClave"
+                        [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="mostrarOcultarClave"
+                    >
+                        <mat-icon class="icon-mostrar-ocultar">{{ mostrarOcultarClave ? "visibility" : "visibility_off" }}</mat-icon>
                     </a>
                 </mat-form-field>
             </div>
