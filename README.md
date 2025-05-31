@@ -35,3 +35,5 @@ https://fundacion-fas.web.app
 `ng generate component pagina/inicio` (Pagina Inicio)<br>
 `ng generate component pagina/quienes-somos` (Pagina Quiénes Somos)<br>
 `ng generate component pagina/autenticacion/acceso` (Acceso)<br>
+`ng generate service arquitectura/servicio/autenticador` (Servicio para Autenticacion - Acceso)
+
