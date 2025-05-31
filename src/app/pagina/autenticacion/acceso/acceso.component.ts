@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
+interface accesoForm{
+  email: FormControl<string>;
+  password: FormControl<string>;
+}
 
 @Component({
   selector: 'app-acceso',
@@ -12,10 +19,42 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    CommonModule,
+    ReactiveFormsModule
   ],
   templateUrl: './acceso.component.html',
   styleUrl: './acceso.component.css'
 })
 export class AccesoComponent {
   mostrarOcultarClave = true;
+  formBuilder = inject(FormBuilder);
+
+  //******************* VALIDAR FORMULARIO *********************Add commentMore actions
+  formularioAcceso: FormGroup<accesoForm> = this.formBuilder.group({
+    // VALIDACION CORREO
+    email: this.formBuilder.control('', {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
+    // VALIDACION CONTRASEÑA
+    password: this.formBuilder.control('', {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
+  });
+
+  // FUNCION PARA OBTENER EL ERROR DEL FORMULARIO
+  get validacionCorreo(): string | boolean {
+    const control = this.formularioAcceso.get('email');
+    const esValido = control?.invalid && control.touched;
+    if (esValido) {
+      return control.hasError('required')
+        ? 'Campo Requerido'
+        : 'Correo Invalido';
+      }
+      return false;
+  }
+
+  // FUNCION DE ENVIO DEL FORMULARIO FIREBASE
+  envioAcceso(){}
 }
