@@ -4,6 +4,7 @@ import { QuienesSomosComponent } from './pagina/quienes-somos/quienes-somos.comp
 import { AccesoComponent } from './pagina/autenticacion/acceso/acceso.component';
 import { PerfilComponent } from './pagina/autenticacion/perfil/perfil.component';
 import { estadoPrivado, estadoPublico } from './arquitectura/guardia/enrutamiento.guard';
+import { ProgramasComponent } from './pagina/programas/programas.component';
 
 
 
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {path: 'perfil',
         component:PerfilComponent,
         canActivate: [estadoPrivado],
+    },
+    {path: 'programas',
+        component:ProgramasComponent,
+        canActivate: [estadoPublico],
     },
 ];
