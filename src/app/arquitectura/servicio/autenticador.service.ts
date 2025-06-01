@@ -28,4 +28,13 @@ export class AutenticadorService {
       credencial.password
     );
   }
+
+  /////////////////////////////////////////////////////
+  //////////////////// CERRAR SESION //////////////////
+  ////////////////////////////////////////////////////
+
+   //DESLOGUEO
+   cerrarSesion(): Promise<void>{
+    return this.autenticador.signOut()
+  } 
 }
