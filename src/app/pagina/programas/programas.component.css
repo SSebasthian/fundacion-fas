@@ -1,0 +1,232 @@
+.contenedor-imagen {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto; /* altura automática */
+  aspect-ratio: 16 / 9; /* Mantiene relación proporcional en todas las pantallas */
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  display: block;
+  object-fit: contain; /* opcional, mantiene la imagen completa dentro del contenedor */
+}
+
+.texto-superpuesto {
+  position: absolute;
+  width: 90%;
+  max-width: 600px;
+  bottom: 35%;
+  left: 80%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  letter-spacing: 0.1rem;
+  line-height: 5.5rem;
+}
+
+@media (max-width: 1400px) {
+  .texto-superpuesto {
+        bottom: 35%;
+        left: 77%;
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+    }
+}
+@media (max-width: 1240px) {
+  .texto-superpuesto {
+        bottom: 40%;
+        left: 77%;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+}
+@media (max-width: 1050px) {
+  .texto-superpuesto {
+        max-width: 400px;
+        bottom: 40%;
+        left: 75%;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+}
+@media (max-width: 700px) {
+  .contenedor-imagen {
+  position: relative;
+  width: 100%;
+  height: 500px; /* altura fija */
+  overflow: hidden; /* importante para recortar */
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta para llenar el contenedor */
+  display: block;
+}
+  .texto-superpuesto {
+    bottom: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 60%;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+
+
+
+
+.programas {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-top: -17%;
+}
+
+.programas .contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.programas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+.programas h2::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+.programas .section {
+  margin-bottom: 40px;
+}
+
+.programas .section h3 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  font-weight: 550;
+}
+
+.programas .section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+.contendio-programas {
+  display: grid;
+  padding: 0.51rem;
+  width: 80%;
+  margin: auto;
+}
+
+.contendio-programas .tarjeta {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 70%;
+  margin: auto;
+}
+.tarjeta.reversa {
+  flex-direction: row-reverse;
+}
+
+.contendio-programas .tarjeta .caja-img {
+  width: 300px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.contendio-programas .tarjeta .caja-img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.contendio-programas .tarjeta .project-info {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contendio-programas .tarjeta .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contendio-programas .tarjeta .project-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.contendio-programas .tarjeta .tag {
+  background: #e0e0e0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.contendio-programas .tarjeta .lighter {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+} 
+
+
+@media screen and (max-width: 1050px) {
+  .contendio-programas {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+  .contendio-programas {
+        width: 97%;
+    }
+
+.contendio-programas .tarjeta {
+    max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .programas {
+        margin-top: 0%;
+    }
+    .contendio-programas .tarjeta,
+    .contendio-programas .tarjeta.reversa {
+        max-width: 100%;
+        flex-direction: column !important;
+    }
+    
+    .contendio-programas .tarjeta .caja-img {
+        width: 200px;
+        height: 150px;
+        margin: auto;
+    }
+}
