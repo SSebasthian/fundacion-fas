@@ -5,6 +5,7 @@ import { AccesoComponent } from './pagina/autenticacion/acceso/acceso.component'
 import { PerfilComponent } from './pagina/autenticacion/perfil/perfil.component';
 import { estadoPrivado, estadoPublico } from './arquitectura/guardia/enrutamiento.guard';
 import { ProgramasComponent } from './pagina/programas/programas.component';
+import { VinculacionComponent } from './pagina/vinculacion/vinculacion.component';
 
 
 
@@ -29,6 +30,10 @@ export const routes: Routes = [
     },
     {path: 'programas',
         component:ProgramasComponent,
+        canActivate: [estadoPublico],
+    },
+    {path: 'vinculacion',
+        component:VinculacionComponent,
         canActivate: [estadoPublico],
     },
 ];
