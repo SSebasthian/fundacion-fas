@@ -29,11 +29,9 @@ export const routes: Routes = [
         canActivate: [estadoPrivado],
     },
     {path: 'programas',
-        component:ProgramasComponent,
-        canActivate: [estadoPublico],
+        component:ProgramasComponent
     },
     {path: 'vinculacion',
-        component:VinculacionComponent,
-        canActivate: [estadoPublico],
+        component:VinculacionComponent
     },
 ];

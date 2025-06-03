@@ -87,6 +87,25 @@
                       El número es obligatorio.
                     </div>
                 </label>
+
+                <div class="grid">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" formControlName="universidad">
+                        <span>Universidad</span>
+                        <div class="error" *ngIf="formularioContacto.get('universidad')?.invalid && formularioContacto.get('universidad')?.touched">
+                          El campo es obligatorio.
+                        </div>
+                    </label>
+                    <span class="espacio"></span>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" formControlName="carrera">
+                        <span>Carrera</span>
+                        <div class="error" *ngIf="formularioContacto.get('carrera')?.invalid && formularioContacto.get('carrera')?.touched">
+                          El campo es obligatorio.
+                        </div>
+                    </label>
+                </div>     
+
                 <label>
                     <textarea required="" rows="5" placeholder="" class="input01" formControlName="mensaje"></textarea>
                     <span>Mensaje</span>

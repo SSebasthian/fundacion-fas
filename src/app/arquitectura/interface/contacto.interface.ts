@@ -6,4 +6,6 @@ export default interface Producto{
   telefono: number;
   mensaje: string;
   fecha: Date;
+  universidad?: string;
+  carrera?: string;
 }
