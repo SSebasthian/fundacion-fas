@@ -40,5 +40,6 @@ https://fundacion-fas.web.app
 `ng generate component pagina/autenticacion/perfil` (Perfil)<br>
 `ng generate component pagina/programas` (Pagina Programas)<br>
 `ng generate component pagina/vinculacion` (Pagina Vinculación)<br>
+`Se crea interface contacto manualmente` (Interface Contacto)
 
 
