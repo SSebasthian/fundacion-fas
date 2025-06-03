@@ -1,0 +1,449 @@
+/* IMAGEN */
+
+.contenedor-imagen {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto; /* altura automática */
+  aspect-ratio: 16 / 9; /* Mantiene relación proporcional en todas las pantallas */
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  display: block;
+  object-fit: contain; /* opcional, mantiene la imagen completa dentro del contenedor */
+}
+
+.texto-superpuesto {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left:  5%;
+  margin-top: -30%;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: left;
+  backdrop-filter: blur(2px);
+  letter-spacing: 0.1rem;
+  line-height: 5.5rem;
+  color: #fff;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, .3);  
+}
+
+
+/* CONTENIDO PROGRAMAS */
+
+.programas {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-top: -17%;
+}
+
+.programas .contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.programas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+.programas h2::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+.programas .section {
+  margin-bottom: 40px;
+}
+
+.programas .section h3 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 15px;
+  font-weight: 550;
+}
+
+.programas .section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* QUE TE OFRECEMOS */
+
+.ofrecemos {
+  padding-top: 50px;
+  width: 100%;
+}
+
+
+.ofrecemos h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+.ofrecemos h3::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+.ofrecemos .contenido-ofrecemos{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+}
+  .contenido-ofrecemos div {
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .ofrecemos-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.ofrecemos-item mat-icon {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    color: #fff; 
+    flex-shrink: 0;
+    padding: 10px;
+    background: #1976d2;
+    border-radius: 50%;
+}
+
+
+/**********************************************/
+/**************** FORMULARIO ******************/
+/**********************************************/
+
+.contacto{
+  padding-top: 50px;
+}
+.contacto h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  padding-bottom: 30px;
+}
+.contacto h3::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 3px;
+  background: #4fbfef;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 60px;
+  border-radius: 30px;
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 0 1fr;
+  width: 97%;
+  gap: 20px;
+}
+
+.form label {
+  position: relative;
+  padding: 5px 0;
+}
+
+.form label .input {
+  width: 95%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span,
+.form label .inputmail:not(:placeholder-shown) + span {
+  top: -15px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+
+.form label .input:valid + span,
+.form label .inputmail:valid + span {
+  color: #1976d2;
+}
+
+.input01 {
+  width: 95%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+}
+ 
+.form label .input01 + span {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input01:placeholder-shown + span {
+  top: 40px;
+  font-size: 0.9em;
+}
+
+
+.form label .input01:focus + span,.form label .input01:valid + span {
+  top: -16px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.form label .input01:valid + span {
+  color: #1976d2;
+}
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #cacaca;
+  border-radius: 0px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 390;
+  letter-spacing: 2px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 8px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+
+.fancy .text {
+  font-size: 1.125em;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #818181;
+  transform: translateX(30%);
+}
+
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: #297fb9c0;
+}
+
+.fancy:hover::before {
+  width: 1.5rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}  
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1400px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        margin-left:  3%;
+        margin-top: -20%;
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+    }
+
+}
+@media (max-width: 1240px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        margin-top: -20%;
+        font-size: 2.7rem;
+        line-height: 3.5rem;
+        max-width: 400px;
+    }
+  .programas h2 {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 1050px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media (max-width: 920px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+    max-width: 300px;
+    font-size: 2.7rem;
+    margin-top: -30%;
+  }
+  .programas h2 {
+    margin-top: -40px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  /* IMAGEN */
+  .contenedor-imagen {
+    position: relative;
+    width: 100%;
+    height: 500px; /* altura fija */
+    overflow: hidden; /* importante para recortar */
+  }
+
+  .contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recorta para llenar el contenedor */
+    display: block;
+  }
+  .texto-superpuesto {
+    width: 95%;
+    max-width: 200px;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+  .programas h2 {
+    margin-top: 30px;
+    width: 97%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  /* FORMULARIO */
+
+  .form {
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid .espacio{
+    display: none;
+  }
+}
+
+
+
+

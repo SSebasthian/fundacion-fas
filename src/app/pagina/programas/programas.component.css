@@ -1,3 +1,5 @@
+/* IMAGEN */
+
 .contenedor-imagen {
   position: relative;
   width: 100%;
@@ -9,7 +11,7 @@
 .contenedor-imagen img {
   width: 100%;
   display: block;
-  object-fit: contain; /* opcional, mantiene la imagen completa dentro del contenedor */
+  object-fit: cover; /* recorta para llenar el contenedor */
 }
 
 .texto-superpuesto {
@@ -27,72 +29,17 @@
   backdrop-filter: blur(2px);
   letter-spacing: 0.1rem;
   line-height: 5.5rem;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, .3);  
 }
 
-@media (max-width: 1400px) {
-  .texto-superpuesto {
-        bottom: 35%;
-        left: 77%;
-        font-size: 3.5rem;
-        line-height: 5.5rem;
-    }
-}
-@media (max-width: 1240px) {
-  .texto-superpuesto {
-        bottom: 40%;
-        left: 77%;
-        font-size: 2.5rem;
-        line-height: 3.5rem;
-    }
-}
-@media (max-width: 1050px) {
-  .texto-superpuesto {
-        max-width: 400px;
-        bottom: 40%;
-        left: 75%;
-        font-size: 2rem;
-        line-height: 3.5rem;
-    }
-}
-@media (max-width: 700px) {
-  .contenedor-imagen {
-  position: relative;
-  width: 100%;
-  height: 500px; /* altura fija */
-  overflow: hidden; /* importante para recortar */
-}
-
-.contenedor-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* recorta para llenar el contenedor */
-  display: block;
-}
-  .texto-superpuesto {
-    bottom: 10%;
-    left: 60%;
-    transform: translateX(-50%);
-    width: 95%;
-    max-width: 60%;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    text-align: right;
-    padding: 0.5rem 1rem;
-  }
-}
-
-
-
-
-
-
+/* CONTENIDO PROGRAMAS */
 
 .programas {
   background-color: #f9f9f9;
   padding: 60px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  margin-top: -17%;
+  margin-top: -20%;
 }
 
 .programas .contenido {
@@ -105,6 +52,7 @@
   font-size: 2.5rem;
   margin-bottom: 40px;
   color: #2c3e50;
+  margin-top: 40px;
 }
 .programas h2::after {
   content: "";
@@ -131,8 +79,6 @@
   font-size: 1rem;
   line-height: 1.6;
 }
-
-
 
 
 .contendio-programas {
@@ -198,13 +144,69 @@
 } 
 
 
-@media screen and (max-width: 1050px) {
-  .contendio-programas {
-        width: 95%;
+
+/* RESPONSIVE */
+
+@media (max-width: 1400px) {
+  /* IMAGEN */
+  .contenedor-imagen {
+    position: relative;
+    width: 100%;
+    height: 612px; /* Altura por defecto en pantallas grandes */
+    overflow: hidden;
+  }
+  .texto-superpuesto {
+        bottom: 35%;
+        left: 77%;
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+    }
+    .contenedor-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* recorta para llenar el contenedor */
+      display: block;
+    }
+    .programas {
+      margin-top: -5%;
     }
 }
 
+@media (max-width: 1240px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        bottom: 40%;
+        left: 77%;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+  .programas {
+    margin-top: -7%;
+  }
+}
+@media (max-width: 1050px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        max-width: 400px;
+        bottom: 40%;
+        left: 75%;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+  /* CONTENIDO PROGRAMAS */
+  .contendio-programas {
+        width: 95%;
+    }
+  .programas {
+    margin-top: -10%;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  /* CONTENIDO PROGRAMAS */
   .contendio-programas {
         width: 97%;
     }
@@ -214,7 +216,9 @@
     }
 }
 
+
 @media screen and (max-width: 750px) {
+  /* CONTENIDO PROGRAMAS */
     .programas {
         margin-top: 0%;
     }
@@ -229,4 +233,39 @@
         height: 150px;
         margin: auto;
     }
+    .programas {
+      margin-top: -15%;
+    }
 }
+
+
+@media (max-width: 700px) {
+  /* IMAGEN */
+  .contenedor-imagen {
+    position: relative;
+    width: 100%;
+    height: 500px; /* altura fija */
+    overflow: hidden; /* importante para recortar */
+  }
+
+  .texto-superpuesto {
+    bottom: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 60%;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
+  .programas {
+    margin-top: -5px;
+  }
+  .programas h2 {
+    margin-top: -60px;
+    font-size: 1.8rem;
+  }
+}
+
+
