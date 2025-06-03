@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ContactoService } from '../../arquitectura/servicio/contacto.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     MatIconModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   templateUrl: './vinculacion.component.html',
   styleUrl: './vinculacion.component.css'
@@ -34,8 +36,11 @@ export class VinculacionComponent {
   }
 
   enviar() {
-  if (this.formularioContacto.valid) {
-    const datos = {
+    if (this.formularioContacto.invalid) {
+      this.formularioContacto.markAllAsTouched(); // 
+      return;
+    }
+      const datos = {
       ...this.formularioContacto.value,
       fecha: new Date()
     };
@@ -50,4 +55,4 @@ export class VinculacionComponent {
       });
   }
 }
-}
+

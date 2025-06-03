@@ -58,26 +58,41 @@
                     <label>
                         <input required="" placeholder="" type="text" class="input" formControlName="nombre">
                         <span>Nombres</span>
+                        <div class="error" *ngIf="formularioContacto.get('nombre')?.invalid && formularioContacto.get('nombre')?.touched">
+                          El nombre es obligatorio.
+                        </div>
                     </label>
                     <span class="espacio"></span>
                     <label>
                         <input required="" placeholder="" type="text" class="input" formControlName="apellido">
                         <span>Apellido</span>
+                        <div class="error" *ngIf="formularioContacto.get('apellido')?.invalid && formularioContacto.get('apellido')?.touched">
+                          El apellido es obligatorio.
+                        </div>
                     </label>
                 </div>      
 
                 <label>
                     <input required="" placeholder="" type="email" class="input inputmail" formControlName="correo">
                     <span>Correo</span>
+                    <div class="error" *ngIf="formularioContacto.get('correo')?.invalid && formularioContacto.get('correo')?.touched">
+                      Ingresa un correo válido.
+                    </div>
                 </label> 
                     
                 <label>
                     <input required="" type="number" placeholder="" class="input" formControlName="telefono">
                     <span>Numero Telefonico</span>
+                    <div class="error" *ngIf="formularioContacto.get('telefono')?.invalid && formularioContacto.get('telefono')?.touched">
+                      El número es obligatorio.
+                    </div>
                 </label>
                 <label>
                     <textarea required="" rows="5" placeholder="" class="input01" formControlName="mensaje"></textarea>
                     <span>Mensaje</span>
+                    <div class="error" *ngIf="formularioContacto.get('mensaje')?.invalid && formularioContacto.get('mensaje')?.touched">
+                      El mensaje es obligatorio.
+                    </div>
                 </label>
                 
                 <button class="fancy"  type="submit">
