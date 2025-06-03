@@ -31,7 +31,9 @@ export class VinculacionComponent {
       apellido: ['', Validators.required],
       correo: ['', [Validators.required, Validators.email]],
       telefono: ['', Validators.required],
-      mensaje: ['', Validators.required]
+      mensaje: ['', Validators.required],
+      universidad: ['', Validators.required],
+      carrera: ['', Validators.required]
     });
   }
 
