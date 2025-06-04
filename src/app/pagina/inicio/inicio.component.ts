@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon'
+import { RouterLink, RouterModule } from '@angular/router';
 
 
 
@@ -7,7 +8,9 @@ import {MatIconModule} from '@angular/material/icon'
   selector: 'app-inicio',
   standalone: true,
   imports: [
-    MatIconModule
+    MatIconModule,
+    RouterLink,
+    RouterModule,
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
