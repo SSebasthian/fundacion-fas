@@ -32,6 +32,7 @@ https://fundacion-fas.web.app
 
 `ng new fundacion-fas` (Se crea con CSS)<br>
 `ng generate component compartido/menu` (Menu)<br>
+`ng generate component compartido/footer` (Footer)<br>
 `ng generate component pagina/inicio` (Pagina Inicio)<br>
 `ng generate component pagina/quienes-somos` (Pagina Quiénes Somos)<br>
 `ng generate component pagina/autenticacion/acceso` (Acceso)<br>
