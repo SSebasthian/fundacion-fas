@@ -11,7 +11,7 @@
 .contenedor-imagen img {
   width: 100%;
   display: block;
-  object-fit: contain; /* opcional, mantiene la imagen completa dentro del contenedor */
+  object-fit: contain; 
 }
 
 .texto-superpuesto {
@@ -333,6 +333,40 @@
   }
 }
 
+@media (max-width: 1400px) {
+  /* IMAGEN */
+  .contenedor-imagen {
+    position: relative;
+    width: 100%;
+    height: 612px; /* Altura por defecto en pantallas grandes */
+    overflow: hidden;
+  }
+
+    .contenedor-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      display: block;
+    }
+
+    .inicio {
+      margin-top: 4%;
+    }
+}
+
+@media (max-width: 1240px) {
+  /* IMAGEN */
+  .texto-superpuesto {
+        bottom: 20%;
+        left: 65%;
+        margin-left: 50px;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: right;
+    }
+}
+
+
 @media (max-width: 1200px) {
     .valores .valor::after {
         right: -5px;
@@ -341,7 +375,7 @@
 
 
 /* Tablets: 2 columnas */
-@media (max-width: 1052px) {
+@media (max-width: 1050px) {
     
     .valores {
         grid-template-columns: repeat(2, 1fr);
@@ -363,55 +397,13 @@
     .texto-vinculacion {
       min-width: 100px;
     }
-}
-
-
-
-@media (max-width: 1400px) {
-  /* IMAGEN */
-  .contenedor-imagen {
-    position: relative;
-    width: 100%;
-    height: 612px; /* Altura por defecto en pantallas grandes */
-    overflow: hidden;
-  }
-  .texto-superpuesto {
-        bottom: 35%;
-        left: 77%;
-        font-size: 3.5rem;
-        line-height: 5.5rem;
-    }
-    .contenedor-imagen img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* recorta para llenar el contenedor */
-      display: block;
-    }
-
-    .inicio {
-      margin-top: 4%;
-    }
-}
-
-@media (max-width: 1240px) {
-  /* IMAGEN */
-  .texto-superpuesto {
-        bottom: 40%;
-        left: 70%;
-        font-size: 2.5rem;
-        line-height: 3.5rem;
-    }
-}
-
-@media (max-width: 1050px){
 
   /* IMAGEN */
   .texto-superpuesto {
         max-width: 400px;
         bottom: 40%;
-        left: 75%;
-        font-size: 2rem;
-        line-height: 3.5rem;
+        left: 63%;
+        font-size: 3rem;
     }
 
   .contenedor-bienvenida .imagen-bienvenida {
@@ -502,20 +494,20 @@
     }
 
     .texto-superpuesto {
-      bottom: 10%;
+      bottom: 15%;
       left: 60%;
-      transform: translateX(-50%);
-      width: 95%;
-      max-width: 60%;
-      font-size: 1.5rem;
-      line-height: 2.2rem;
-      text-align: right;
-      padding: 0.5rem 1rem;
+      font-size: 2.1rem;
+      width: 180px;
     }
     .boton-quienes-somos{
       margin-top: 0px;
       margin-left: 0px;
       text-align: center;
+    }
+    
+    .inicio .titulo,
+    .inicio .titulo2{
+      font-size: 2.2rem;
     }
 
     .valores {
@@ -525,9 +517,9 @@
         margin: 0;
     }
 
-  .valores .valor h2 {
+  .valores .valor h2{
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .valores .valor::before {
@@ -587,11 +579,12 @@
 }
 
 /* Móviles */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .texto-superpuesto {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    bottom: 10%;
+    left: 55%;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
   }
 }
  
