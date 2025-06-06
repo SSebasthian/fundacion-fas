@@ -50,3 +50,4 @@ https://fundacion-fas.web.app
 `firebase init functions`<br>
 `cd functions`<br>
 `npm install nodemailer`<br>
+`@types/nodemailer`<br>
