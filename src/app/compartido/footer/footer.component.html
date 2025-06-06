@@ -1,1 +1,64 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="contenido">
+
+        <div class="seccion">
+            <!-- Logo y frase -->
+            <div  class="contenido-seccion">
+                <div>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo-letrablanca.png?alt=media&token=65b852ad-6e47-480d-9c9d-13896651f8e5" alt="Logo FAS" class="footer-logo">
+                </div>
+            </div>
+
+            <!-- Sección Juntos hacemos la diferencia -->
+            <div  class="contenido-seccion"> 
+                <div class="texto">
+                    <h2>Juntos hacemos la diferencia</h2>
+                    <p>
+                        <b>¿Ya nos conoces?</b> En FAS trabajamos por un mundo más justo y solidario. Súmate como voluntario, 
+                        aliado o donante y sé parte del cambio. <b>¡Juntos transformamos vidas!</b>
+                    </p>        
+                </div>
+                
+            </div>
+        </div>
+      
+    
+        <div class="seccion">
+            <!-- Sección Ubicación -->
+            <div class="contenido-seccion">
+                <div class="ubicacion">
+                    <h2>Sede</h2>
+                    <p>
+                        <mat-icon>location_on</mat-icon><b><span>Ubicación:</span></b><br> Colombia - Montelibano - Cordoba <br>
+                        <mat-icon>home</mat-icon><b><span>Dirección:</span></b><br>Calle 15 Carrera 7 # 14-07 <br>
+                        <mat-icon>phone</mat-icon><b><span>Telefono:</span></b><br> +57 310 8183235
+                    </p>      
+                </div> 
+            </div>
+                
+
+            <!-- Enlaces -->
+            <div class="contenido-seccion">
+                <div class="enlaces">
+                    <h2>Enlaces</h2>
+                    <ul class="sub-menu">
+                        <li><a [routerLink]="['inicio']" routerLinkActive="activa"><span>Inicio</span></a></li>
+                        <li><a [routerLink]="['quienes-somos']" routerLinkActive="activa"><span>Nosotros</span></a></li>
+                        <li><a [routerLink]="['programas']" routerLinkActive="activa"><span>Programas</span></a></li>
+                        <li><a [routerLink]="['vinculacion']" routerLinkActive="activa"><span>Vinculación</span></a></li>
+                    </ul>
+                </div>
+                
+            </div>  
+        </div>
+    </div>
+
+     <div class="derechos-reservados">
+        <p>
+            © 2025 Fundación FAS. Todos los derechos reservados. <br>
+            Este sitio web fue desarrollado en colaboración con Diana Martinez, como parte de su proyecto 
+            de práctica profesional en la Fundación Acciones Sostenibles.
+        </p>
+
+    </div>
+</footer>
