@@ -1,14 +1,20 @@
 
 <div class="barra-responsive">
+    <div class="acceso-responsive">
+      <a [routerLink]="['acceso']" (click)="cerrarMenu()" class="icon-acceso">
+        <mat-icon routerLinkActive="activa">person</mat-icon>
+      </a>
+    </div>
+
   <div class="logo-responsive">
         <img src="https://firebasestorage.googleapis.com/v0/b/fundacion-fas.firebasestorage.app/o/Empresa%2Flogo.png?alt=media&token=6c12e567-036f-4ee1-b877-49eb2dfe6e05" alt="FAS" [routerLink]="['inicio']">
     </div>
-  <input type="checkbox" id="menu-responsive" (click)="menuHamburguesa()" #menuCheckbox>
-    <label for="menu-responsive" id="menu-icon-hamburguesa">
-        <div></div>
-        <div></div>
-        <div></div>
-    </label>
+    <input type="checkbox" id="menu-responsive" (click)="menuHamburguesa()" #menuCheckbox>
+      <label for="menu-responsive" id="menu-icon-hamburguesa">
+          <div></div>
+          <div></div>
+          <div></div>
+      </label>
 </div>
 
 <div class="contenedor-menu" [class.menu-abierto]="menuAbierto">
@@ -23,7 +29,7 @@
       <li><a [routerLink]="['quienes-somos']" routerLinkActive="activa"  (click)="cerrarMenu()"><span>NOSOTROS</span></a></li>
       <li><a [routerLink]="['programas']" routerLinkActive="activa"  (click)="cerrarMenu()"><span>PROGRAMAS</span></a></li>
       <li><a [routerLink]="['vinculacion']" routerLinkActive="activa"  (click)="cerrarMenu()"><span>VINCULACIÓN</span></a></li>
-      <li class="linea"><a [routerLink]="['acceso']" (click)="cerrarMenu()" class="icon-acceso"><mat-icon routerLinkActive="activa">person</mat-icon></a></li>
+      <li class="acceso"><a [routerLink]="['acceso']" (click)="cerrarMenu()" class="icon-acceso"><mat-icon routerLinkActive="activa">person</mat-icon></a></li>
       <li class="solo-responsive"><br></li>
     </ul>
   </nav>

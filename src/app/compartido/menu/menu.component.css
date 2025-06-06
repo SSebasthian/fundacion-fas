@@ -74,7 +74,8 @@
 .menu .opciones li .icon-acceso::after{
    opacity: 0;
 }
-.linea{
+
+.acceso{
   border-left: 1px solid #ccc;
   padding-left: 50px;
   height: 100%;
@@ -93,6 +94,12 @@
 	display: none;
 } 
 
+@media (max-width: 950px) {
+  .acceso{
+    padding-left: 20px;
+  }
+}
+
 
 @media (max-width: 700px) {
    
@@ -108,13 +115,35 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 1.5rem;
     z-index: 9998;
+    justify-content: space-between;
+    overflow: hidden;
   }
-  .barra-responsive img{
+  .acceso{
+    display: none;
+  } 
+    .acceso-responsive{
+      display: flex;
+      align-items: left;
+    }
+  .acceso-responsive mat-icon{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: #178a72;
+  }
+
+  .barra-responsive .logo-responsive{
+    position: absolute;
+    left: 43%;
+    transform: translateX(-50%);
+    overflow: hidden;
+  }
+  .barra-responsive .logo-responsive img{
     width: 60px;
-  }
+  } 
+
 
   .contenedor-menu{
 		transform: translateX(-130%);
@@ -124,6 +153,7 @@
     position: fixed;
     width: 75%;
     z-index: 9999;
+    overflow: hidden;
   }
 
   .contenedor-menu.menu-abierto {
@@ -242,7 +272,7 @@
   #menu-icon-hamburguesa {
 		position: fixed;
 		top: 25px;
-		right: 20px;
+		right: 35px;
 		display: block;
 		width: 30px; 
 		height: 30px;
@@ -290,6 +320,5 @@
 		right: 6px;
 		transform: rotateZ(-45deg);
 	}
-
-  
+    
 }
