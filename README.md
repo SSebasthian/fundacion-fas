@@ -45,3 +45,6 @@ https://fundacion-fas.web.app
 `ng generate service arquitectura/servicio/contacto` (Servicio Contacto)
 
 
+ ## Firebase Funcions
+
+`firebase init functions`
