@@ -47,4 +47,6 @@ https://fundacion-fas.web.app
 
  ## Firebase Funcions
 
-`firebase init functions`
+`firebase init functions`<br>
+`cd functions`<br>
+`npm install nodemailer`<br>
