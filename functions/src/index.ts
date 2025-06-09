@@ -8,8 +8,8 @@ const corsHandler = cors({ origin: true });
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    user: 'ssebasthian.perez@gmail.com',
-    pass: 'axxcukfllaxgbten',
+    user: 'fundacionfasvinculacion@gmail.com',
+    pass: 'zomhiznqpcetpyul',
   },
 });
 
@@ -18,8 +18,8 @@ export const enviarCorreo = functions.https.onRequest((req: Request, res: Respon
     const datos = req.body;
 
     const mailOptions = {
-      from: 'ssebasthian.perez@gmail.com',
-      to: 'destinatario@gmail.com',
+      from: 'fundacionfasvinculacion@gmail.com',
+      to: `fundacionaccionessostenibles@gmail.com, facciones2020@gmail.com, ${datos.correo}`,
       subject: '📩 Nuevo mensaje desde el formulario de contacto - Pagina Web',
       html: 
       `
