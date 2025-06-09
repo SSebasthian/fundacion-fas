@@ -20,7 +20,7 @@ export const enviarCorreo = functions.https.onRequest((req: Request, res: Respon
     const mailOptions = {
       from: 'fundacionfasvinculacion@gmail.com',
       to: `fundacionaccionessostenibles@gmail.com, facciones2020@gmail.com, ${datos.correo}`,
-      subject: '📩 Nuevo mensaje desde el formulario de contacto - Pagina Web',
+      subject: `📩 Nuevo mensaje de ${datos.nombre} ${datos.apellido} - Formulario Web`,
       html: 
       `
         <table width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 20px;">
