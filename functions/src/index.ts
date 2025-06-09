@@ -1,19 +1,43 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+import * as functions from 'firebase-functions';
+import * as nodemailer from 'nodemailer';
+import cors from 'cors';
+import { Request, Response } from 'express';
 
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
+const corsHandler = cors({ origin: true });
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    user: 'ssebasthian.perez@gmail.com',
+    pass: 'axxcukfllaxgbten',
+  },
+});
 
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+export const enviarCorreo = functions.https.onRequest((req: Request, res: Response) => {
+  corsHandler(req, res, () => {
+    const datos = req.body;
+
+    const mailOptions = {
+      from: 'ssebasthian.perez@gmail.com',
+      to: 'destinatario@gmail.com', 
+      subject: 'Nuevo mensaje desde formulario',
+      html: `
+        <p><strong>Nombre:</strong> ${datos.nombre} ${datos.apellido}</p>
+        <p><strong>Correo:</strong> ${datos.correo}</p>
+        <p><strong>Teléfono:</strong> ${datos.telefono}</p>
+        <p><strong>Universidad:</strong> ${datos.universidad}</p>
+        <p><strong>Carrera:</strong> ${datos.carrera}</p>
+        <p><strong>Mensaje:</strong> ${datos.mensaje}</p>
+      `
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error al enviar correo:', error);
+        return res.status(500).send(error.toString());
+      }
+      console.log('✅ Correo enviado con info:', info);
+      return res.status(200).json({ mensaje: 'Correo enviado correctamente' });    
+    });
+  });
+});
