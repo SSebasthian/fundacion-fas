@@ -74,7 +74,7 @@
 .menu .opciones li .icon-acceso::after{
    opacity: 0;
 }
-
+/* 
 .acceso{
   border-left: 1px solid #ccc;
   padding-left: 50px;
@@ -85,7 +85,7 @@
 
 .solo-responsive {
   display: none;
-}
+} */
 
 #menu-responsive,
 #menu-icon-hamburguesa,
@@ -94,11 +94,11 @@
 	display: none;
 } 
 
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
   .acceso{
     padding-left: 20px;
   }
-}
+} */
 
 
 @media (max-width: 700px) {
@@ -120,7 +120,7 @@
     justify-content: space-between;
     overflow: hidden;
   }
-  .acceso{
+  /* .acceso{
     display: none;
   } 
     .acceso-responsive{
@@ -132,11 +132,11 @@
     width: 30px;
     height: 30px;
     color: #178a72;
-  }
+  } */
 
   .barra-responsive .logo-responsive{
     position: absolute;
-    left: 43%;
+    left: 10%;
     transform: translateX(-50%);
     overflow: hidden;
   }
